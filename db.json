@@ -1,0 +1,20 @@
+{
+  "surveys": [
+    {
+      "id": 1,
+      "name": "Yasser Angel",
+      "age": 40,
+      "country": "Mexico",
+      "so": "Windows",
+      "dificult_topics": ["Promises", "APIs"]
+    },
+    {
+      "id": 2,
+      "name": "Pedro Torres",
+      "age": 25,
+      "country": "Colombia",
+      "so": "Linux",
+      "dificult_topics": ["Arrays", "Promises", "APIs"]
+    }
+  ]
+}
