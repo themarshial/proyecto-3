@@ -6,15 +6,55 @@
       "age": 40,
       "country": "Mexico",
       "so": "Windows",
-      "dificult_topics": ["Promises", "APIs"]
+      "dificult_topics": [
+        "Promises",
+        "APIs"
+      ]
     },
     {
       "id": 2,
       "name": "Pedro Torres",
-      "age": 25,
+      "age": 23,
       "country": "Colombia",
       "so": "Linux",
-      "dificult_topics": ["Arrays", "Promises", "APIs"]
+      "dificult_topics": [
+        "Arrays",
+        "Promises",
+        "APIs"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Oscar Lopez",
+      "age": 40,
+      "country": "Mexico",
+      "so": "Windows",
+      "dificult_topics": [
+        "Promises",
+        "APIs"
+      ]
+    },
+    {
+      "dificult_topics": [
+        "HTML",
+        "CSS"
+      ],
+      "name": "Ada",
+      "age": 45,
+      "country": "Bolivia",
+      "so": "MacOs",
+      "id": 4
+    },
+    {
+      "dificult_topics": [
+        "CSS",
+        "Arrays"
+      ],
+      "name": "Luis",
+      "age": 19,
+      "country": "Venezuela",
+      "so": "Linux",
+      "id": 5
     }
   ]
 }
