@@ -1,159 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <title>API Test</title>
-    <style>
-      .edad {
-        width: 400px;
-      }
-      .row {
-        display: flex;
-        justify-content: space-between;
-      }
-      .survey {
-        display: flex;
-        flex-direction: column;
-        margin: 20px auto;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>API TEST</h1>
-    <form class="survey">
-      <label for="name"
-        >Nombre: <input type="text" name="name" id="name"
-      /></label>
-      <label for="country"
-        >País:
-        <select name="country" id="country">
-          <option value="México">México</option>
-          <option value="Bolivia">Bolivia</option>
-          <option value="Venezuela">Venezuela</option>
-          <option value="Argentina">Argentina</option>
-        </select></label
-      >
-      <label for="age">Edad: <input type="number" name="age" id="age" /></label>
-      <label for="so"
-        >Sistema operativo:
-        <select name="so" id="so">
-          <option value="Windows">Windows</option>
-          <option value="MacOs">MacOs</option>
-          <option value="Linux">Linux</option>
-        </select></label
-      >
-      <label for="html"
-        ><input
-          type="checkbox"
-          name="html"
-          id="html"
-          value="HTML"
-          class="topics"
-        />HTML</label
-      >
-      <label for="css"
-        ><input
-          type="checkbox"
-          name="css"
-          id="css"
-          value="CSS"
-          class="topics"
-        />CSS</label
-      >
-      <label for="array"
-        ><input
-          type="checkbox"
-          name="array"
-          id="array"
-          value="Arrays"
-          class="topics"
-        />Arrays</label
-      >
-      <label for="DOM"
-        ><input
-          type="checkbox"
-          name="DOM"
-          id="DOM"
-          value="DOM"
-          class="topics"
-        />DOM</label
-      >
-      <button type="button" id="send">Enviar</button>
-    </form>
-    <div class="row">
-      <div class="edad">
-        <canvas id="ageChart"></canvas>
-      </div>
-      <div class="edad">
-        <canvas id="soChart"></canvas>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg=" crossorigin=""></script>
+  <title>API Test</title>
+  <style>
+    .edad {
+      width: 400px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .survey {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+    }
+
+    #map {
+      height: 400px;
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>API TEST</h1>
+  <form class="survey">
+    <label for="name">Nombre: <input type="text" name="name" id="name" /></label>
+    <label for="country">País:
+      <select name="country" id="country">
+        <option value="Mexico">Mexico</option>
+        <option value="Bolivia">Bolivia</option>
+        <option value="Venezuela">Venezuela</option>
+        <option value="Argentina">Argentina</option>
+      </select></label>
+    <label for="age">Edad: <input type="number" name="age" id="age" /></label>
+    <label for="so">Sistema operativo:
+      <select name="so" id="so">
+        <option value="Windows">Windows</option>
+        <option value="MacOs">MacOs</option>
+        <option value="Linux">Linux</option>
+      </select></label>
+    <label for="html"><input type="checkbox" name="html" id="html" value="HTML" class="topics" />HTML</label>
+    <label for="css"><input type="checkbox" name="css" id="css" value="CSS" class="topics" />CSS</label>
+    <label for="array"><input type="checkbox" name="array" id="array" value="Arrays" class="topics" />Arrays</label>
+    <label for="DOM"><input type="checkbox" name="DOM" id="DOM" value="DOM" class="topics" />DOM</label>
+    <button type="button" id="send">Enviar</button>
+  </form>
+  <div class="row">
+    <div class="edad">
+      <canvas id="ageChart"></canvas>
     </div>
-  </body>
-  <script src="/js/statistics.js"></script>
-  <script src="/js/db.js"></script>
-  <script>
-    getSurveys().then((res) => {
+    <div class="edad">
+      <canvas id="soChart"></canvas>
+    </div>
+  </div>
+  </div>
+
+
+  <div id="map">
+
+  </div>
+</body>
+<script src="/js/statistics.js"></script>
+<script src="/js/db.js"></script>
+<script>
+  document.cookie = "SameSite=None; Secure";
+  getCountriesData().then((res) => {
+    console.log(res);
+  });
+
+  getSurveys().then((res) => {
+    console.log(res);
+
+    let ages = res.map((survey) => {
+      return survey['age'];
+    });
+
+    let rangeAgeLabels = ageRanges.map((range) => {
+      return range['title'];
+    });
+    let countries = res.map(survey => {
+      return survey['country'];
+    })
+
+    const ageCanvas = document.getElementById('ageChart');
+    const soCanvas = document.getElementById('soChart');
+    let ageChartConfig = {
+      type: 'bar',
+      data: {
+        labels: rangeAgeLabels,
+        datasets: [
+          {
+            label: 'Edad',
+            data: processAgeData(ages),
+          },
+        ],
+      },
+    };
+
+    let soChartConfig = {
+      type: 'pie',
+      data: {
+        labels: ['Windows', 'MacOS', 'Linux'],
+        datasets: [
+          {
+            label: 'Edad',
+            data: processSOData(res, ['Windows', 'MacOs', 'Linux']),
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.5)',
+              'rgba(54, 162, 235, 0.5)',
+              'rgba(255, 206, 86, 0.5)',
+            ], // Color de fondo
+            borderColor: 'rgba(209,234,163,1)', // Color del borde
+            borderWidth: 1,
+          },
+        ],
+      },
+    };
+    let ageChart = new Chart(ageCanvas, ageChartConfig);
+    let soChart = new Chart(soCanvas, soChartConfig);
+
+  });
+
+
+
+  document.getElementById('send').addEventListener('click', () => {
+    let survey = {};
+    survey.dificult_topics = [];
+    survey.name = document.getElementById('name').value;
+    survey.age = parseInt(document.getElementById('age').value);
+    survey.country = document.getElementById('country').value;
+    survey.so = document.getElementById('so').value;
+    document.querySelectorAll('.topics:checked').forEach((topic) => {
+      survey.dificult_topics.push(topic.value);
+    });
+
+    postSurvey(survey).then((res) => {
       console.log(res);
-      let ages = res.map((survey) => {
-        return survey['age'];
-      });
+    }).catch(err => console.log(err));
+  }); 
+</script>
 
-      let rangeAgeLabels = ageRanges.map((range) => {
-        return range['title'];
-      });
-
-      const ageCanvas = document.getElementById('ageChart');
-      const soCanvas = document.getElementById('soChart');
-      let ageChartConfig = {
-        type: 'bar',
-        data: {
-          labels: rangeAgeLabels,
-          datasets: [
-            {
-              label: 'Edad',
-              data: processAgeData(ages),
-            },
-          ],
-        },
-      };
-
-      let soChartConfig = {
-        type: 'pie',
-        data: {
-          labels: ['Windows', 'MacOS', 'Linux'],
-          datasets: [
-            {
-              label: 'Edad',
-              data: processSOData(res, ['Windows', 'MacOs', 'Linux']),
-              backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-              ], // Color de fondo
-              borderColor: 'rgba(209,234,163,1)', // Color del borde
-              borderWidth: 1,
-            },
-          ],
-        },
-      };
-      let ageChart = new Chart(ageCanvas, ageChartConfig);
-      let soChart = new Chart(soCanvas, soChartConfig);
-    });
-
-    document.getElementById('send').addEventListener('click', () => {
-      let survey = {};
-      survey.dificult_topics = [];
-      survey.name = document.getElementById('name').value;
-      survey.age = parseInt(document.getElementById('age').value);
-      survey.country = document.getElementById('country').value;
-      survey.so = document.getElementById('so').value;
-      document.querySelectorAll('.topics:checked').forEach((topic) => {
-        survey.dificult_topics.push(topic.value);
-      });
-      postSurvey(survey).then((res) => console.log(res));
-    });
-  </script>
 </html>

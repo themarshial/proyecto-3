@@ -60,3 +60,5 @@ const processSOData = (data, findValues) => {
   });
   return SOFrecuencies;
 };
+
+const getSingleCountries = (countries) => [...new Set(countries)];

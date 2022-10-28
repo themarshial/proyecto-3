@@ -1,4 +1,5 @@
 const ApiURL = 'http://localhost:3000/surveys';
+const countriesURL = 'https://cdn.jsdelivr.net/gh/gavinr/world-countries-centroids@v1/dist/countries.geojson'
 
 async function getSurveys() {
   const response = await fetch(ApiURL);
@@ -8,19 +9,15 @@ async function getSurveys() {
   const surveys = await response.json();
   return surveys;
 }
+
 async function getCountriesData() {
-  let surveys = [];
-  try {
-    const response = await fetch(ApiURL);
+    const response = await fetch(countriesURL);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
-    surveys = await response.json();
-  } catch (error) {
-    console.error(error);
+    const countries = await response.json();
+    return countries;
   }
-  return surveys;
-}
 
 async function postSurvey(survey) {
   const options = {
@@ -40,3 +37,4 @@ async function postSurvey(survey) {
   }
   return surveyResponse;
 }
+

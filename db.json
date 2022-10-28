@@ -1,38 +1,14 @@
 {
   "surveys": [
     {
-      "id": 1,
+      "dificult_topics": [
+        "HTML"
+      ],
       "name": "Yasser Angel",
-      "age": 40,
-      "country": "Mexico",
+      "age": 39,
+      "country": "México",
       "so": "Windows",
-      "dificult_topics": [
-        "Promises",
-        "APIs"
-      ]
-    },
-    {
-      "id": 2,
-      "name": "Pedro Torres",
-      "age": 23,
-      "country": "Colombia",
-      "so": "Linux",
-      "dificult_topics": [
-        "Arrays",
-        "Promises",
-        "APIs"
-      ]
-    },
-    {
-      "id": 3,
-      "name": "Oscar Lopez",
-      "age": 40,
-      "country": "Mexico",
-      "so": "Windows",
-      "dificult_topics": [
-        "Promises",
-        "APIs"
-      ]
+      "id": 1
     },
     {
       "dificult_topics": [
@@ -40,18 +16,38 @@
         "CSS"
       ],
       "name": "Ada",
-      "age": 45,
+      "age": 39,
       "country": "Bolivia",
+      "so": "Windows",
+      "id": 2
+    },
+    {
+      "dificult_topics": [
+        "HTML"
+      ],
+      "name": "Lucas",
+      "age": 25,
+      "country": "México",
       "so": "MacOs",
+      "id": 3
+    },
+    {
+      "dificult_topics": [
+        "Arrays",
+        "DOM"
+      ],
+      "name": "Francisco",
+      "age": 35,
+      "country": "Venezuela",
+      "so": "Windows",
       "id": 4
     },
     {
       "dificult_topics": [
-        "CSS",
         "Arrays"
       ],
-      "name": "Luis",
-      "age": 19,
+      "name": "Jose Luis",
+      "age": 24,
       "country": "Venezuela",
       "so": "Linux",
       "id": 5
