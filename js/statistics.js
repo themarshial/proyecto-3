@@ -48,7 +48,7 @@ const processAgeData = (data) => {
   return groupedData;
 };
 
-const countOcurrences = (arr, findVal) =>
+const countOccurences = (arr, findVal) =>
   arr.reduce((acc, val) => (val === findVal ? acc + 1 : acc), 0);
 
 const processSOData = (data, findValues) => {
@@ -56,9 +56,31 @@ const processSOData = (data, findValues) => {
     return survey['so'];
   });
   let SOFrecuencies = findValues.map((so) => {
-    return countOcurrences(SOData, so);
+    return countOccurences(SOData, so);
   });
   return SOFrecuencies;
 };
 
 const getSingleCountries = (countries) => [...new Set(countries)];
+
+const getCoordinate = (countries, country) => {
+  let index = countries.features.findIndex(
+    (item) => item.properties.COUNTRY === country
+  );
+  return [
+    countries.features[index].geometry.coordinates[1],
+    countries.features[index].geometry.coordinates[0],
+  ];
+};
+
+const getCoordinatesArray = (countries, findValues, frecuencies) => {
+  return findValues.map((item, index) => {
+    return getCoordinate(countries, item).concat(frecuencies[index]);
+  });
+};
+
+const getFrequencies = (data, findValues) => {
+  return findValues.map((item) => {
+    return countOccurences(data, item);
+  });
+};

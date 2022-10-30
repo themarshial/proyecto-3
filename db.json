@@ -2,55 +2,106 @@
   "surveys": [
     {
       "dificult_topics": [
-        "HTML"
+        "Arrays"
       ],
       "name": "Yasser Angel",
-      "age": 39,
-      "country": "México",
+      "age": 40,
+      "country": "Bolivia",
       "so": "Windows",
       "id": 1
     },
     {
       "dificult_topics": [
-        "HTML",
         "CSS"
       ],
-      "name": "Ada",
-      "age": 39,
-      "country": "Bolivia",
-      "so": "Windows",
+      "name": "Pedro",
+      "age": 45,
+      "country": "Mexico",
+      "so": "MacOs",
       "id": 2
+    },
+    {
+      "dificult_topics": [
+        "CSS"
+      ],
+      "name": "Gaby",
+      "age": 35,
+      "country": "Mexico",
+      "so": "Linux",
+      "id": 3
+    },
+    {
+      "dificult_topics": [
+        "HTML",
+        "CSS",
+        "Arrays",
+        "DOM"
+      ],
+      "name": "Alicia",
+      "age": 26,
+      "country": "Mexico",
+      "so": "MacOs",
+      "id": 4
     },
     {
       "dificult_topics": [
         "HTML"
       ],
-      "name": "Lucas",
-      "age": 25,
-      "country": "México",
-      "so": "MacOs",
-      "id": 3
-    },
-    {
-      "dificult_topics": [
-        "Arrays",
-        "DOM"
-      ],
-      "name": "Francisco",
-      "age": 35,
+      "name": "Ada",
+      "age": 21,
       "country": "Venezuela",
       "so": "Windows",
-      "id": 4
+      "id": 5
     },
     {
       "dificult_topics": [
         "Arrays"
       ],
       "name": "Jose Luis",
-      "age": 24,
+      "age": 35,
       "country": "Venezuela",
+      "so": "MacOs",
+      "id": 6
+    },
+    {
+      "dificult_topics": [
+        "Arrays"
+      ],
+      "name": "Francisco",
+      "age": 35,
+      "country": "Argentina",
       "so": "Linux",
-      "id": 5
+      "id": 7
+    },
+    {
+      "dificult_topics": [
+        "Arrays"
+      ],
+      "name": "Jose Luis",
+      "age": 31,
+      "country": "Mexico",
+      "so": "MacOs",
+      "id": 8
+    },
+    {
+      "dificult_topics": [
+        "CSS"
+      ],
+      "name": "Ada",
+      "age": 25,
+      "country": "Mexico",
+      "so": "MacOs",
+      "id": 9
+    },
+    {
+      "dificult_topics": [
+        "Arrays"
+      ],
+      "name": "Ada",
+      "age": 36,
+      "country": "Venezuela",
+      "so": "Windows",
+      "id": 10
     }
   ]
 }
