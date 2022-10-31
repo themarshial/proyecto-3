@@ -1,4 +1,4 @@
-const ageRanges = [
+const AGE_RANGES = [
   {
     title: '< 20',
     min: 0,
@@ -31,12 +31,16 @@ const ageRanges = [
   },
 ];
 
+const NUM_TOPICS = 4; // Number of posible difficult topics to ask in the survey
+
+/* Get the tittles property values of AGE_RANGES constant */
+export const getSurveyTopicData = (ageRanges) => {
+  return ageRanges.map((range) => range['titile']);
+};
+
 /* Receives all ages as parameters, groups them into categories and returns an array with the count of ages in each category. */
-const processAgeData = (data) => {
-  let groupedData = [];
-  for (let i = 0; i < ageRanges.length; i++) {
-    groupedData.push(0);
-  }
+export const groupAgeData = (data) => {
+  let groupedData = new Array(ageRanges.length).fill(0);
   data.forEach((age) => {
     for (let i = 0; i < ageRanges.length; i++) {
       if (age > ageRanges[i].min && age <= ageRanges[i].max) {
@@ -48,21 +52,14 @@ const processAgeData = (data) => {
   return groupedData;
 };
 
+/* Iterates over an array and counts the occurrences of a given value */
 const countOccurences = (arr, findVal) =>
   arr.reduce((acc, val) => (val === findVal ? acc + 1 : acc), 0);
 
-const processSOData = (data, findValues) => {
-  let SOData = data.map((survey) => {
-    return survey['so'];
-  });
-  let SOFrecuencies = findValues.map((so) => {
-    return countOccurences(SOData, so);
-  });
-  return SOFrecuencies;
-};
+/* Remove repeated elements from a given array */
+export const removeDuplicates = (data) => [...new Set(data)];
 
-const getSingleCountries = (countries) => [...new Set(countries)];
-
+/* Search for a country by its name within a GeoJson file and return the coordinates of the centroid of the searched country */
 const getCoordinate = (countries, country) => {
   let index = countries.features.findIndex(
     (item) => item.properties.COUNTRY === country
@@ -73,14 +70,28 @@ const getCoordinate = (countries, country) => {
   ];
 };
 
-const getCoordinatesArray = (countries, findValues, frecuencies) => {
+/* Returns an array formed by coordinates and frequencies of countries stored in the array provided to the function */
+export const getCoordinatesAndFeq = (countries, findValues, frecuencies) => {
   return findValues.map((item, index) => {
     return getCoordinate(countries, item).concat(frecuencies[index]);
   });
 };
 
-const getFrequencies = (data, findValues) => {
+/* Returns the cumulative frequencies of elements of a given array */
+export const getFrequencies = (data, findValues) => {
   return findValues.map((item) => {
     return countOccurences(data, item);
   });
+};
+
+/* Returns the cumulative frequencies of elements of the difficult topics by dividing them into two arrays: difficult and not difficult. */
+export const getTopicsFrecuencies = (data) => {
+  let dTopics = new Array(NumTopics).fill(0);
+  let nDTopics = new Array(NumTopics).fill(0);
+  data.forEach((element) => {
+    for (let i = 0; i < NumTopics; i++) {
+      element[i] === 1 ? (dTopics[i] += 1) : (nDTopics[i] += 1);
+    }
+  });
+  return [dTopics, nDTopics];
 };
