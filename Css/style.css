@@ -13,9 +13,8 @@ body {
     justify-content:space-evenly;
     border-radius: 20px;
     font-size: large;
-    font-size: large;
     font-weight: 200;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: 'Michroma', sans-serif;
 }
 /*No logro que "Encuesta" y "Dashboard" se pasen aisladamente a la derecha.
   Apesar de que estan en contenedores separados*/
@@ -41,3 +40,16 @@ body {
     */
   }
 
+  .btn-ir:hover{
+    background-color: darkslateblue;
+    color: aliceblue;
+}
+
+/*Media queries*/ 
+
+@media (max-width:600px){
+  body{
+    background-color: black;
+    color: rgb(242, 241, 238);
+  }
+}

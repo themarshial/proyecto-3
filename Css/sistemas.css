@@ -13,14 +13,16 @@ body {
     justify-content:space-evenly;
     border-radius: 20px;
     font-size: large;
-    font-size: large;
     font-weight: 200;
-    font-family:Arial, Helvetica, sans-serif
+    font-family: 'Michroma', sans-serif;
 }
 
 .form{
     display: flex;
     justify-content: center;
+    border-style: solid;
+    border-color: rgb(85, 205, 235);
+    border-top-width: 15px;
 }
 
 .btn-ir{
@@ -33,4 +35,9 @@ body {
     display: flex;
     justify-content: center;
     max-width: min-content;
+}
+
+.btn-ir:hover{
+    background-color: darkslateblue;
+    color: aliceblue;
 }
