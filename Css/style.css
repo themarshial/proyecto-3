@@ -68,3 +68,12 @@ h2{
 
   }
 }
+
+.contenedor{
+  width: 100%;
+  height: calc(100vh - 70px);
+}
+
+.hidden{
+  display: none;
+}
