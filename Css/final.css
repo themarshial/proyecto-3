@@ -1,0 +1,32 @@
+
+.final{
+    
+    border-style: solid;
+    border-color: rgb(85, 205, 235);
+    display: flex;
+    border-radius: 25px;
+    justify-content: center;
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 0px 25%;
+}
+
+.btn-reiniciar{
+      color: antiquewhite;
+    background-color: #0974eed1;
+    padding: 8px 20px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:5px;
+    display: flex;
+    justify-content: center;
+    /* max-width: min-content; */
+    font-size: 20px;
+    /* margin-top: 15px; */
+}
+
+.btn-reiniciar:hover{
+    background-color: crimson;
+    color: aliceblue;
+}
