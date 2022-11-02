@@ -5,23 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Css/nombre.css">
+    <link rel="stylesheet" href="./Css/style.css">
     <title>Bienvenido a la encuesta</title>
 </head>
 <body>
-    <header class="header">
-        <div class="titulo1" id="top-dash">U-BOOTCAMP
-        </div>
-        <div class="titulo2">
-            Encuesta 
-        </div>
-        <div class="dashboard">Dasboard</div>
+    <header>
+        <iframe src="components/header.html"></iframe>
     </header>
-        <br>
-        <div>
-       <input type="text" id="respuestaNombre">
-       <h3 class="pregunta1">Por favor escribe tu nombre completo</h3>
+    <br>
+    <div>
+        <div class="bloque-form">
+            <input type="text" id="respuestaNombre">
+            <h2 class="pregunta1">Por favor escribe tu nombre completo</h2>
+        </div>
        <br><br>
-       <a href="./pais.html" class="btn-ir">Siguiente pregunta</a>
+       <div class="bloque-btn">
+           <a href="./pais.html" class="btn-ir">Siguiente pregunta</a>
+       </div>
        <script src="./js/statistics.js"></script>
     </div>
 </body>
