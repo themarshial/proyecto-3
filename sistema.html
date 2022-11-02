@@ -5,15 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Css/sistemas.css">
+    <link rel="stylesheet" href="./Css/style.css">
     <title>Encuesta</title>
 </head>
 <body>
-    <header class="header">
-        <div class="titulo1" id="top-dash">U-BOOTCAMP
-        </div>
-        <div class="titulo2">
-            Encuesta Dasboard
-        </div>
+    <header>
+        <iframe src="components/header.html"></iframe>
     </header>
     <h2 class="sist">¿Que sistema operativo utilizas?</h2>
     <form class="form">
@@ -25,7 +22,10 @@
         <label for="linux">Linux</label>
         <br>
       </form> 
-      <a href="./temas.html" class="btn-ir">Siguiente pregunta</a>
+      <br>
+      <div class="bloque-btn">
+          <a href="./temas.html" class="btn-ir">Siguiente pregunta</a>
+      </div>
       <script src="./js/statistics.js"></script>
     </body>
 </html>
