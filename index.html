@@ -1,159 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./Css/pais.css" />
-    <link rel="stylesheet" href="Css/sistemas.css" />
-    <link rel="stylesheet" href="./Css/temas.css" />
-    <link rel="stylesheet" href="./Css/style.css" />
-    <title>Home Page</title>
-  </head>
 
-  <body>
-    <header>
-      <iframe src="components/header.html"></iframe>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./Css/pais.css" />
+  <link rel="stylesheet" href="Css/sistemas.css" />
+  <link rel="stylesheet" href="./Css/temas.css" />
+  <link rel="stylesheet" href="./Css/style.css" />
+  <title>Home Page</title>
+</head>
 
-    <div class="contenedor" id="contenedor-principal">
-      <h1 class="main">¡Queremos conocerte màs!</h1>
-      <h2>
-        Te agradecemos que te tomes unos momomentos para responder esta pequeña
-        encuenta y conocerte mejor. Con esto podremos seguir mejorando.
-      </h2>
+<body>
+  <header>
+    <iframe src="components/header.html"></iframe>
+  </header>
+
+  <div class="contenedor" id="contenedor-principal">
+    <h1 class="main">¡Queremos conocerte màs!</h1>
+    <h2>
+      Te agradecemos que te tomes unos momomentos para responder esta pequeña
+      encuenta y conocerte mejor. Con esto podremos seguir mejorando.
+    </h2>
+    <div class="validate-message"></div>
+    <div class="bloque-btn">
+      <button type="button" class="btn next">Empezar encuesta</button>
+    </div>
+  </div>
+  <!--nombre-->
+  <div class="contenedor hidden" id="contenedor-nombre">
+    <div>
+      <div class="bloque-form">
+        <input type="text" id="name" />
+        <h2 class="pregunta1">Por favor escribe tu nombre completo</h2>
+      </div>
+      <div class="validate-message"></div>
+      <br /><br />
       <div class="bloque-btn">
-        <button type="button" class="btn-ir">Empezar encuesta</button>
+        <button type="button" class="btn next">Siguiente Pregunta</button>
       </div>
     </div>
-    <!--nombre-->
-    <div class="contenedor hidden" id="contenedor-nombre">
-      <div>
-        <div class="bloque-form">
-          <input type="text" id="name" />
-          <h2 class="pregunta1">Por favor escribe tu nombre completo</h2>
-        </div>
-        <br /><br />
-        <div class="bloque-btn">
-          <button type="button" class="btn-ir">Siguiente Pregunta</button>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <div class="contenedor hidden" id="contenedor-edad">
-      <div>
-        <div class="bloque-form">
-          <input type="number" id="respuestaEdad" />
-          <h2 class="pregunta1">Por favor escribe tu edad</h2>
-        </div>
-        <br /><br />
-        <div class="bloque-btn">
-          <button type="button" class="btn-ir">Siguiente Pregunta</button>
-        </div>
+  <div class="contenedor hidden" id="contenedor-edad">
+    <div>
+      <div class="bloque-form">
+        <input type="number" id="age" />
+        <h2 class="pregunta1">Por favor escribe tu edad</h2>
       </div>
-    </div>
-
-    <div class="contenedor hidden" id="contenedor-pais">
-      <h2 class="pais">¿De que pais estas tomando este Bootcamp?</h2>
-      <div class="wrapper">
-        <div class="select-btn">
-          <span id="country">Encontrar pais</span>
-          <i class="uil uil-angle-down"></i>
-        </div>
-        <div class="content">
-          <div class="search">
-            <i class="uil uil-search"></i>
-            <input
-              spellcheck="false"
-              type="text"
-              placeholder="Search"
-              value="country"
-            />
-          </div>
-          <ul class="options"></ul>
-        </div>
-      </div>
-      <br />
-      <button type="button" class="btn-ir">Siguiente Pregunta</button>
-      <br />
-      <h2>¿Ya nos ganamos el 100/100?</h2>
-      <script src="./js/pais.js"></script>
-    </div>
-
-    <div class="contenedor hidden" id="contenedor-sistema">
-      <h2 class="sist">¿Que sistema operativo utilizas?</h2>
-      <form class="form">
-        <input type="radio" id="windows" name="sist_op" value="microsoft" />
-        <label for="Windows">Windows</label><br />
-        <input type="radio" id="mac" name="sist_op" value="apple" />
-        <label for="mac">Mac</label><br />
-        <input type="radio" id="linux" name="sist_op" value="lin" />
-        <label for="linux">Linux</label>
-        <br />
-      </form>
-      <br />
+      <div class="validate-message"></div>
+      <br /><br />
       <div class="bloque-btn">
-        <button type="button" class="btn-ir">Siguiente Pregunta</button>
+        <button type="button" class="btn next">Siguiente Pregunta</button>
       </div>
     </div>
+  </div>
 
-    <div class="contenedor hidden" id="contenedor-sistema">
-      <h2>Selecciona una o mas opciones</h2>
-      <div class="form_temas">
-        <input type="checkbox" name="html" id="respuesta1" value="HTML" />
-        <label for="tema_1"></label>HTML<br />
-        <input type="checkbox" name="css" id="respuesta2" value="css" />
-        <label for="tema_2">CSS</label><br />
-        <input
-          type="checkbox"
-          name="Javascript"
-          id="respuesta3"
-          value="Javascript"
-        />
-        <label for="tema_3">Javascript</label><br />
-        <input type="checkbox" name="Arrays" id="respuesta4" value="Arrays" />
-        <label for="tema_4">Arrays</label><br />
-        <input type="checkbox" name="DOM" id="respuesta5" value="DOM" />
-        <label for="tema_5">DOM</label><br />
-        <input type="checkbox" name="Funciones" id="respuesta6" value="DOM" />
-        <label for="tema_6">Funciones</label><br />
-        <input
-          type="checkbox"
-          name="Objectos"
-          id="respuesta7"
-          value="Objectos"
-        />
-        <label for="tema_7">Objectos</label><br />
-        <input
-          type="checkbox"
-          name="Promesas"
-          id="respuesta8"
-          value="Promesas"
-        />
-        <label for="tema_8">Promesas</label><br />
-      </div>
+  <div class="contenedor hidden" id="contenedor-pais">
+    <h2 class="pais">¿De que pais estas tomando este Bootcamp?</h2>
+    <select name="country" id="country">
+      <option disabled selected value="">Selecciona una opción</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Bolivia">Bolivia</option>
+      <option value="Venezuela">Venezuela</option>
+      <option value="Argentina">Argentina</option>
+    </select>
+    <div class="validate-message"></div>
+    <br />
+    <button type="button" class="btn next">Siguiente Pregunta</button>
+    <br />
+    <!-- <h2>¿Ya nos ganamos el 100/100?</h2>
+      <script src="./js/pais.js"></script> -->
+  </div>
+
+  <div class="contenedor hidden" id="contenedor-sistema">
+    <h2 class="sist">¿Que sistema operativo utilizas?</h2>
+    <form class="form">
+      <input type="radio" class="sist_op" id="windows" name="sist_op" />
+      <label for="Windows">Windows</label><br />
+      <input type="radio" class="sist_op" id="
+        MacOS" name="sist_op" />
+      <label for="mac">Mac</label><br />
+      <input type="radio" class="sist_op" id="linux" name="sist_op" />
+      <label for="linux">Linux</label>
       <br />
-      <div class="bloque-btn">
-        <button type="button" class="btn-ir">Siguiente Pregunta</button>
-      </div>
-    </div>
-
-    <div class="contenedor hidden" id="contenedor-sistema">
-      <div class="final">
-        <h1>¡Gracias!</h1>
-      </div>
-      <h2>
-        El paso final es darle al botòn para guardar las respuestas. Estaremos
-        muy agradecidos por tu pariticpaciòn.
-      </h2>
-    </div>
+    </form>
+    <div class="validate-message"></div>
     <br />
     <div class="bloque-btn">
-        <button type="button" class="btn-ir2" onclick="saveData()">Guardar</button>
-      
+      <button type="button" class="btn next">Siguiente Pregunta</button>
     </div>
-    <!-- <button onclick="location.href.">Este boton no me sirvio como link.</button> -->
+  </div>
 
-    <script src="./js/ui.js"></script>
-  </body>
+  <div class="contenedor hidden" id="contenedor-sistema">
+    <h2>Selecciona una o mas opciones</h2>
+    <div class="form_temas">
+      <input type="checkbox" class="topics" name="html" id="respuesta1" value="HTML" />
+      <label for="tema_1"></label>HTML<br />
+      <input type="checkbox" class="topics" name="css" id="respuesta2" value="css" />
+      <label for="tema_2">CSS</label><br />
+      <input type="checkbox" class="topics" name="Javascript" id="respuesta3" value="Javascript" />
+      <label for="tema_3">Javascript</label><br />
+      <input type="checkbox" class="topics" name="Arrays" id="respuesta4" value="Arrays" />
+      <label for="tema_4">Arrays</label><br />
+      <input type="checkbox" class="topics" name="DOM" id="respuesta5" value="DOM" />
+      <label for="tema_5">DOM</label><br />
+      <input type="checkbox" class="topics" name="Funciones" id="respuesta6" value="DOM" />
+      <label for="tema_6">Funciones</label><br />
+      <input type="checkbox" class="topics" name="Objectos" id="respuesta7" value="Objectos" />
+      <label for="tema_7">Objectos</label><br />
+      <input type="checkbox" class="topics" name="Promesas" id="respuesta8" value="Promesas" />
+      <label for="tema_8">Promesas</label><br />
+    </div>
+    <br />
+    <div class="validate-message"></div>
+    <div class="bloque-btn">
+      <button type="button" class="btn next">Siguiente Pregunta</button>
+    </div>
+  </div>
+
+  <div class="contenedor hidden" id="contenedor-sistema">
+    <div class="final">
+      <h1>¡Gracias!</h1>
+    </div>
+    <h2>
+      El paso final es darle al botòn para guardar las respuestas. Estaremos
+      muy agradecidos por tu pariticpaciòn.
+    </h2>
+  </div>
+  <br />
+  <div class="bloque-btn">
+    <button type="button" class="btn save">Guardar</button>
+
+  </div>
+  <!-- <button onclick="location.href.">Este boton no me sirvio como link.</button> -->
+
+  <script src="./index.js" type="module"></script>
+</body>
+
 </html>
