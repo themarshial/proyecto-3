@@ -67,6 +67,57 @@
       "country": "Venezuela",
       "so": "Linux",
       "id": 4
+    },
+    {
+      "dificult_topics": [
+        1,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "name": "aaa",
+      "age": "12",
+      "country": "Bolivia",
+      "so": "MacOS",
+      "id": 5
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "name": "BBB",
+      "age": "13",
+      "country": "Venezuela",
+      "so": "Linux",
+      "id": 6
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        0
+      ],
+      "name": "nico",
+      "age": "54",
+      "country": "Argentina",
+      "so": "MacOS",
+      "id": 7
     }
   ]
 }
