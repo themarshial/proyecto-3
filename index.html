@@ -77,12 +77,12 @@
   <div class="contenedor hidden" id="contenedor-sistema">
     <h2 class="sist">¿Que sistema operativo utilizas?</h2>
     <form class="form">
-      <input type="radio" class="sist_op" id="windows" name="sist_op" />
+      <input type="radio" value="Windows" class="sist_op" id="windows" name="sist_op" />
       <label for="Windows">Windows</label><br />
-      <input type="radio" class="sist_op" id="
+      <input type="radio" value="MacOS" class="sist_op" id="
         MacOS" name="sist_op" />
       <label for="mac">Mac</label><br />
-      <input type="radio" class="sist_op" id="linux" name="sist_op" />
+      <input type="radio" value="Linux" class="sist_op" id="linux" name="sist_op" />
       <label for="linux">Linux</label>
       <br />
     </form>
@@ -116,7 +116,7 @@
     <br />
     <div class="validate-message"></div>
     <div class="bloque-btn">
-      <button type="button" class="btn next">Siguiente Pregunta</button>
+      <button type="button" class="btn next">Finalizar</button>
     </div>
   </div>
 
@@ -128,12 +128,13 @@
       El paso final es darle al botòn para guardar las respuestas. Estaremos
       muy agradecidos por tu pariticpaciòn.
     </h2>
+    <div class="bloque-btn">
+      <button type="button" class="btn save">Guardar</button>
+  
+    </div>
   </div>
   <br />
-  <div class="bloque-btn">
-    <button type="button" class="btn save">Guardar</button>
-
-  </div>
+  
   <!-- <button onclick="location.href.">Este boton no me sirvio como link.</button> -->
 
   <script src="./index.js" type="module"></script>

@@ -1,3 +1,72 @@
 {
-  "surveys": []
+  "surveys": [
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "name": "Lucas",
+      "age": "23",
+      "country": "Mexico",
+      "so": "Windows",
+      "id": 1
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Yasser Angel",
+      "age": "40",
+      "country": "Mexico",
+      "so": "Windows",
+      "id": 2
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "Pedro",
+      "age": "22",
+      "country": "Bolivia",
+      "so": "MacOS",
+      "id": 3
+    },
+    {
+      "dificult_topics": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "Francisco",
+      "age": "35",
+      "country": "Venezuela",
+      "so": "Linux",
+      "id": 4
+    }
+  ]
 }
