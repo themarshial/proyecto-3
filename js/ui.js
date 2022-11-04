@@ -78,6 +78,7 @@ export const buildSurveyObject = () => {
 export const manageQuestions = () => {
   document.querySelectorAll(".next").forEach((boton, index) => {
     boton.addEventListener("click", () => {
+      console.log(containers[index]);
       if (validateFunctions[index]()) {
         containers[index].classList.add("hidden");
         if (index + 1 <= containers.length)
@@ -94,4 +95,24 @@ export const showResults = () => {
     e.classList.add("hidden");
   });
   document.getElementById("idGraficas").classList.remove("hidden");
+};
+
+export const showSurvey = () => {
+  document.querySelectorAll(".contenedor").forEach((e) => {
+    e.classList.add("hidden");
+  });
+  document.getElementById("contenedor-principal").classList.remove("hidden");
+  clearData();
+};
+
+export const clearData = () => {
+  document.getElementById("name").value = "";
+  document.getElementById("age").value = "";
+  document.getElementById("country").selectedIndex = 0;
+  document.querySelectorAll(".sist_op").forEach((radio) => {
+    radio.checked = false;
+  });
+  document.querySelectorAll(".topics").forEach((topic) => {
+    topic.checked = false;
+  });
 };

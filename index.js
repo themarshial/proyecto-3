@@ -63,3 +63,11 @@ document.querySelector(".save").addEventListener("click", () => {
 document
   .getElementById("dasboardLink")
   .addEventListener("click", UI.showResults);
+
+  document
+  .getElementById("headerDashboardLink")
+  .addEventListener("click", UI.showResults);
+
+  document
+  .getElementById("encuestaLink")
+  .addEventListener("click", UI.showSurvey);
