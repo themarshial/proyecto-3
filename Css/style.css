@@ -30,7 +30,7 @@ h2{
   justify-content: center;
 }
 
-.btn-ir{
+.btn{
     color: antiquewhite;
     background-color: #0974eed1;
     padding: 8px 20px;
@@ -39,6 +39,7 @@ h2{
     font-weight:bold;
     border-radius:25px;
     font-size: 20px;
+    cursor: pointer;
     /* text-align: center; */
     /* display: flex;
     justify-content: center; */
@@ -68,3 +69,28 @@ h2{
 
   }
 }
+
+.contenedor{
+  width: 100%;
+  
+}
+
+.hidden{
+  display: none;
+}
+
+.chart-container{
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+  
+  .chart-1 { grid-area: 1 / 1 / 2 / 2; }
+  .chart-2 { grid-area: 1 / 2 / 2 / 3; }
+  .chart-3 { grid-area: 2 / 1 / 3 / 2; }
+  .chart-4 { grid-area: 2 / 2 / 3 / 3; }

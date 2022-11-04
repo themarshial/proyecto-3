@@ -34,16 +34,16 @@ const AGE_RANGES = [
 const NUM_TOPICS = 4; // Number of posible difficult topics to ask in the survey
 
 /* Get the tittles property values of AGE_RANGES constant */
-export const getSurveyTopicData = (ageRanges) => {
-  return ageRanges.map((range) => range['titile']);
+export const getAgeTitles = (ageRanges) => {
+  return AGE_RANGES.map((range) => range['title']);
 };
 
 /* Receives all ages as parameters, groups them into categories and returns an array with the count of ages in each category. */
 export const groupAgeData = (data) => {
-  let groupedData = new Array(ageRanges.length).fill(0);
+  let groupedData = new Array(AGE_RANGES.length).fill(0);
   data.forEach((age) => {
-    for (let i = 0; i < ageRanges.length; i++) {
-      if (age > ageRanges[i].min && age <= ageRanges[i].max) {
+    for (let i = 0; i < AGE_RANGES.length; i++) {
+      if (age > AGE_RANGES[i].min && age <= AGE_RANGES[i].max) {
         groupedData[i] += 1;
         return;
       }
