@@ -59,3 +59,7 @@ document.querySelector(".save").addEventListener("click", () => {
     })
     .catch((err) => console.error(err));
 });
+
+document
+  .getElementById("dasboardLink")
+  .addEventListener("click", UI.showResults);

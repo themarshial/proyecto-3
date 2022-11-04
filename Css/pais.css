@@ -1,8 +1,4 @@
-
-
-
-
-.pais{
+.pais {
   display: flex;
   justify-content: center;
   color: #f2f2f2;
@@ -10,30 +6,30 @@
   /*Se necesita bakar el texto*/
 }
 /*Encuenta*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
-body{
+body {
   background: #4285f4;
 }
-::selection{
+::selection {
   color: #fff;
   background: #4285f4;
 }
-.wrapper{
+.wrapper {
   width: 370px;
   margin: 50px auto 0;
 }
-.select-btn, li{
+.select-btn,
+li {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-.select-btn{
+.select-btn {
   height: 65px;
   padding: 0 20px;
   font-size: 22px;
@@ -41,16 +37,16 @@ body{
   color: #737373;
   border-radius: 7px;
   justify-content: space-between;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
-.select-btn i{
+.select-btn i {
   font-size: 31px;
   transition: transform 0.3s linear;
 }
-.wrapper.active .select-btn i{
+.wrapper.active .select-btn i {
   transform: rotate(-180deg);
 }
-.content{
+.content {
   display: none;
   padding: 20px;
   margin-top: 15px;
@@ -59,13 +55,13 @@ body{
   border-radius: 7px;
   box-shadow: 0 10px 25px rgba(219, 117, 117, 0.1);
 }
-.wrapper.active .content{
+.wrapper.active .content {
   display: block;
 }
-.content .search{
+.content .search {
   position: relative;
 }
-.search i{
+.search i {
   top: 50%;
   left: 15px;
   color: #999;
@@ -74,7 +70,7 @@ body{
   transform: translateY(-50%);
   position: absolute;
 }
-.search input{
+.search input {
   height: 50px;
   width: 100%;
   outline: none;
@@ -83,39 +79,40 @@ body{
   padding: 0 20px 0 43px;
   border: 1px solid #8d8d8e;
 }
-.search input:focus{
+.search input:focus {
   padding-left: 42px;
   border: 2px solid #4285f4;
 }
-.search input::placeholder{
+.search input::placeholder {
   color: #bfbfbf;
 }
-.content .options{
+.content .options {
   margin-top: 10px;
   max-height: 250px;
   overflow-y: auto;
   padding-right: 7px;
 }
-.options::-webkit-scrollbar{
+.options::-webkit-scrollbar {
   width: 7px;
 }
-.options::-webkit-scrollbar-track{
+.options::-webkit-scrollbar-track {
   background: #f1f1f1;
   border-radius: 25px;
 }
-.options::-webkit-scrollbar-thumb{
+.options::-webkit-scrollbar-thumb {
   background: #ccc;
   border-radius: 25px;
 }
-.options::-webkit-scrollbar-thumb:hover{
+.options::-webkit-scrollbar-thumb:hover {
   background: #b3b3b3;
 }
-.options li{
+.options li {
   height: 50px;
   padding: 0 13px;
   font-size: 21px;
 }
-.options li:hover, li.selected{
+.options li:hover,
+li.selected {
   border-radius: 5px;
   background: #f2f2f2;
 }
