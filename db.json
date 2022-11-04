@@ -118,6 +118,40 @@
       "country": "Argentina",
       "so": "MacOS",
       "id": 7
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Jorge",
+      "age": "31",
+      "country": "Argentina",
+      "so": "MacOS",
+      "id": 8
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "juan",
+      "age": "21",
+      "country": "Mexico",
+      "so": "Linux",
+      "id": 9
     }
   ]
 }

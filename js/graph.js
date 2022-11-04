@@ -61,3 +61,37 @@ export const makeOsChart = (data) => {
   });
   return osChart;
 };
+
+export const makeTopicsChart = (dataYes,dataNo) => {
+  let topicChart = new Chart(document.getElementById("chart-4").getContext("2d"), {
+    type: "bar",
+    data: {
+      labels: [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Arrays",
+        "DOM",
+        "Funciones",
+        "Objetos",
+        "Promesas",
+      ],
+      datasets: [
+        {
+          label: "No se me dificulta",
+          data: dataNo,
+          backgroundColor: ["rgb(66,134,244)"],
+        },
+        {
+          label: "Se me dificulta",
+          data: dataYes,
+          backgroundColor: ["rgb(74,135,72)"],
+        },
+      ],
+    },
+    options: {
+      resposive: true,
+    },
+  });
+  return topicChart;
+};

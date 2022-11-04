@@ -1,41 +1,41 @@
 const AGE_RANGES = [
   {
-    title: '< 20',
+    title: "< 20",
     min: 0,
     max: 20,
   },
   {
-    title: '20 - 25', //(20,25]
+    title: "20 - 25", //(20,25]
     min: 20,
     max: 25,
   },
   {
-    title: '25 - 30',
+    title: "25 - 30",
     min: 25,
     max: 30,
   },
   {
-    title: '30 - 35',
+    title: "30 - 35",
     min: 30,
     max: 35,
   },
   {
-    title: '35 - 40',
+    title: "35 - 40",
     min: 35,
     max: 40,
   },
   {
-    title: '> 40',
+    title: "> 40",
     min: 40,
     max: 100,
   },
 ];
 
-const NUM_TOPICS = 4; // Number of posible difficult topics to ask in the survey
+const NUM_TOPICS = 8; // Number of posible difficult topics to ask in the survey
 
 /* Get the tittles property values of AGE_RANGES constant */
 export const getAgeTitles = (ageRanges) => {
-  return AGE_RANGES.map((range) => range['title']);
+  return AGE_RANGES.map((range) => range["title"]);
 };
 
 /* Receives all ages as parameters, groups them into categories and returns an array with the count of ages in each category. */
@@ -86,10 +86,10 @@ export const getFrequencies = (data, findValues) => {
 
 /* Returns the cumulative frequencies of elements of the difficult topics by dividing them into two arrays: difficult and not difficult. */
 export const getTopicsFrecuencies = (data) => {
-  let dTopics = new Array(NumTopics).fill(0);
-  let nDTopics = new Array(NumTopics).fill(0);
+  let dTopics = new Array(NUM_TOPICS).fill(0);
+  let nDTopics = new Array(NUM_TOPICS).fill(0);
   data.forEach((element) => {
-    for (let i = 0; i < NumTopics; i++) {
+    for (let i = 0; i < NUM_TOPICS; i++) {
       element[i] === 1 ? (dTopics[i] += 1) : (nDTopics[i] += 1);
     }
   });

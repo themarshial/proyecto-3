@@ -8,9 +8,16 @@ DB.getSurveys().then((res) => {
   let ages = DB.getSurveyAgeData(res);
   let groupedAges = ST.groupAgeData(ages);
   CH.makeAgeChart(groupedAges);
-  let os = DB.getSurveySOData(res)
-  let osFrecuencies = ST.getFrequencies(os,["Windows", "MacOS", "Linux"])
-  CH.makeOsChart(osFrecuencies)
+  let os = DB.getSurveySOData(res);
+  let osFrecuencies = ST.getFrequencies(os, ["Windows", "MacOS", "Linux"]);
+  CH.makeOsChart(osFrecuencies);
+
+  //"HTML","CSS","Javascript","Arrays","DOM","Funciones", "Objetos", "Promesas"
+
+  let [siDificulta, noDificulta] = ST.getTopicsFrecuencies(
+    DB.getSurveyTopicData(res)
+  );
+  CH.makeTopicsChart(siDificulta, noDificulta);
 });
 
 document.querySelector(".save").addEventListener("click", () => {
