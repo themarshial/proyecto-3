@@ -1,4 +1,5 @@
 import * as ST from "./statistics.js";
+import * as DB from './db.js';
 
 //grafica de barras
 export const makeAgeChart = (data) => {
@@ -32,6 +33,7 @@ export const makeAgeChart = (data) => {
         },
         */
         resposive: true,
+        maintainAspectRatio: false
       },
     }
   );
@@ -57,12 +59,13 @@ export const makeOsChart = (data) => {
     },
     options: {
       resposive: true,
+      maintainAspectRatio: false
     },
   });
   return osChart;
 };
 
-export const makeTopicsChart = (dataYes,dataNo) => {
+export const makeTopicsChart = (dataYes, dataNo) => {
   let topicChart = new Chart(document.getElementById("chart-4").getContext("2d"), {
     type: "bar",
     data: {
@@ -91,7 +94,13 @@ export const makeTopicsChart = (dataYes,dataNo) => {
     },
     options: {
       resposive: true,
+      maintainAspectRatio: false
     },
   });
   return topicChart;
 };
+
+
+export const displayDashboard = () => {
+ return;
+}

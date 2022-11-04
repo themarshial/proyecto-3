@@ -6,14 +6,35 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-header {
-  width: 100%;
-  height: 100px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
-iframe {
+
+.header {
+  color: rgb(248, 247, 245);
+  background-color: rgb(54, 43, 176);
+
   width: 100%;
-  height: 100px;
-  border-style: none;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-radius: 20px; */
+  font-size: large;
+  font-weight: 200;
+}
+
+.logo {
+  width: 20%;
+  padding-left: 2rem;
+}
+
+.nav {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
 }
 
 .main {
@@ -50,10 +71,12 @@ iframe {
     font-size: 20px;
   }
 }
+
 @media (min-width: 1000px) {
   h2 {
     font-size: 35px;
   }
+
   h1 {
     font-size: 55px;
   }
@@ -61,49 +84,58 @@ iframe {
 
 .contenedor {
   width: 100%;
-  height: calc(100vh - 120px);
+  height: 90%;
   display: flex;
 }
 
-.chart-container {
-  width: 100%;
+.contenedor#graphs-container {
   background-color: white;
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+
 }
 
-.chart-1 {
-  padding: 2rem;
-  width: 50%;
-  height: 50%;
-}
-.chart-2 {
-  padding: 8rem;
-  width: 50%;
-  height: 50%;
-}
-.chart-3 {
-  padding: 2rem;
-  width: 50%;
-}
-.chart-4 {
-  padding: 2rem;
-  width: 50%;
-}
+ .charts-wrapper{
+  height: 100%;
+  width: 100%;
+ }
+
 .row {
   display: flex;
   width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: space-evenly;
 }
+
+.chart{
+  position: relative;
+  flex: 0 1 calc(50% - 2rem);
+  border: 1px solid rgb(156, 151, 151);
+  width: 200px;
+  min-height: 90%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
 #map {
-  height: 100%;
+  height: 90%;
 }
+
 .hero {
   width: 70%;
   height: 100%;
   margin-left: 2rem;
-  margin-top: 5rem;
-}
 
+}
+.main-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 70px);
+}               
 .link {
   color: #0b5ed7;
 }
@@ -118,9 +150,9 @@ iframe {
   font-size: 1.7rem;
 }
 
-#idGraficas {
+/* #graphs-container {
   height: calc(100vh - 120px);
-}
+} */
 
 .questions {
   width: 50%;
@@ -145,6 +177,13 @@ iframe {
   margin-top: 1rem;
 }
 
+#country-container .pregunta,
+#os-container .pregunta,
+#topic-container .pregunta {
+  margin-top: 0;
+}
+
+
 .txtInput {
   padding: 0.7rem 0.5rem 0.3rem 0.5rem;
   font-size: 1rem;
@@ -165,6 +204,7 @@ iframe {
 .input input[type="radio"] {
   font-size: 1rem;
 }
+
 .input input[type="radio"]:first-of-type {
   margin-top: 2rem;
 }
@@ -175,4 +215,10 @@ iframe {
 
 .header .link {
   color: #fff;
+  margin: 0 1rem;
+  font-weight: 500;
+}
+
+.header .link:hover {
+  color: #bfd5f0;
 }
