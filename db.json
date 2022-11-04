@@ -152,6 +152,57 @@
       "country": "Mexico",
       "so": "Linux",
       "id": 9
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "name": "Jorge",
+      "age": "22",
+      "country": "Mexico",
+      "so": "MacOS",
+      "id": 10
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "name": "Jorge",
+      "age": "11",
+      "country": "Argentina",
+      "so": "MacOS",
+      "id": 11
+    },
+    {
+      "dificult_topics": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "name": "alberto",
+      "age": "1111",
+      "country": "Costa Rica",
+      "so": "MacOS",
+      "id": 12
     }
   ]
 }

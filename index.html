@@ -9,6 +9,17 @@
     <link rel="stylesheet" href="./Css/temas.css" />
     <link rel="stylesheet" href="./Css/style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
     <title>Home Page</title>
   </head>
 
@@ -65,6 +76,7 @@
         <option value="Bolivia">Bolivia</option>
         <option value="Venezuela">Venezuela</option>
         <option value="Argentina">Argentina</option>
+        <option value="Costa Rica">Costa Rica</option>
       </select>
       <div class="validate-message"></div>
       <br />
@@ -121,7 +133,7 @@
           id="respuesta1"
           value="HTML"
         />
-        <label for="tema_1"></label>HTML<br /> 
+        <label for="tema_1"></label>HTML<br />
         <input
           type="checkbox"
           class="topics"
@@ -169,7 +181,7 @@
           id="respuesta7"
           value="Objectos"
         />
-        <label for="tema_7">Objetos</label><br /> 
+        <label for="tema_7">Objetos</label><br />
         <input
           type="checkbox"
           class="topics"
@@ -212,7 +224,8 @@
         </div>
         <div class="row">
           <div class="chart-3">
-            <canvas id="chart-3"></canvas>
+            <div id="map"></div>
+            <!--<canvas id="chart-3"></canvas>-->
           </div>
           <div class="chart-4">
             <canvas id="chart-4"></canvas>
