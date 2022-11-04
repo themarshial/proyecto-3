@@ -1,4 +1,4 @@
-const ApiURL = 'http://localhost:3000/surveys';
+const ApiURL = 'https://6364c0c4f711cb49d1eadffc.mockapi.io/api/surveys';
 const countriesURL =
   'https://cdn.jsdelivr.net/gh/gavinr/world-countries-centroids@v1/dist/countries.geojson';
 
@@ -32,10 +32,14 @@ export async function postSurvey(survey) {
   let surveyResponse = null;
   try {
     const response = await fetch(ApiURL, options);
+    console.log(response);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
+    } else {
+      console.log('siiii');
     }
     surveyResponse = await response.json();
+    console.log(surveyResponse);
   } catch (error) {
     console.error(error);
   }

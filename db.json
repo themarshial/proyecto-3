@@ -5,23 +5,6 @@
         0,
         0,
         0,
-        1,
-        0,
-        1,
-        0,
-        1
-      ],
-      "name": "Lucas",
-      "age": "23",
-      "country": "Mexico",
-      "so": "Windows",
-      "id": 1
-    },
-    {
-      "dificult_topics": [
-        0,
-        0,
-        0,
         0,
         0,
         0,
@@ -32,7 +15,7 @@
       "age": "40",
       "country": "Mexico",
       "so": "Windows",
-      "id": 2
+      "id": 1
     }
   ]
 }

@@ -1,7 +1,7 @@
-import * as UI from "./js/ui.js";
-import * as DB from "./js/db.js";
-import * as CH from "./js/graph.js";
-import * as ST from "./js/statistics.js";
+import * as UI from './js/ui.js';
+import * as DB from './js/db.js';
+import * as CH from './js/graph.js';
+import * as ST from './js/statistics.js';
 
 UI.manageQuestions();
 DB.getSurveys().then((res) => {
@@ -9,7 +9,7 @@ DB.getSurveys().then((res) => {
   let groupedAges = ST.groupAgeData(ages);
   CH.makeAgeChart(groupedAges);
   let os = DB.getSurveySOData(res);
-  let osFrecuencies = ST.getFrequencies(os, ["Windows", "MacOS", "Linux"]);
+  let osFrecuencies = ST.getFrequencies(os, ['Windows', 'MacOS', 'Linux']);
   CH.makeOsChart(osFrecuencies);
   let [siDificulta, noDificulta] = ST.getTopicsFrecuencies(
     DB.getSurveyTopicData(res)
@@ -27,9 +27,9 @@ DB.getSurveys().then((res) => {
         singleCountries,
         countryFrecuencies
       );
-      const map = L.map("map").setView([-13.6, -82.5], 3);
+      const map = L.map('map').setView([-13.6, -82.5], 3);
 
-      L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution:
           '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -38,8 +38,8 @@ DB.getSurveys().then((res) => {
       cordinatesArray.forEach((el) => {
         console.log(el);
         let circle = L.circle([el[0], el[1]], {
-          color: "red",
-          fillColor: "#f03",
+          color: 'red',
+          fillColor: '#f03',
           fillOpacity: 0.5,
           stroke: false,
           radius: 200000 * el[2] * 0.3,
@@ -52,22 +52,23 @@ DB.getSurveys().then((res) => {
     .catch((error) => console.log(error));
 });
 
-document.querySelector(".save").addEventListener("click", () => {
+document.querySelector('.save').addEventListener('click', () => {
   DB.postSurvey(UI.buildSurveyObject())
     .then((survey) => {
       console.log(survey);
+      location.reload();
     })
     .catch((err) => console.error(err));
 });
 
 document
-  .getElementById("dasboardLink")
-  .addEventListener("click", UI.showResults);
+  .getElementById('dasboardLink')
+  .addEventListener('click', UI.showResults);
 
-  document
-  .getElementById("headerDashboardLink")
-  .addEventListener("click", UI.showResults);
+document
+  .getElementById('headerDashboardLink')
+  .addEventListener('click', UI.showResults);
 
-  document
-  .getElementById("encuestaLink")
-  .addEventListener("click", UI.showSurvey);
+document
+  .getElementById('encuestaLink')
+  .addEventListener('click', UI.showSurvey);
