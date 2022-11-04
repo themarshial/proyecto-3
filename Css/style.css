@@ -3,6 +3,7 @@ body {
   padding: 0px;
   background-color: rgb(88, 118, 194);
   color: rgb(248, 247, 245);
+  font-family: 'Ubuntu', sans-serif;
 }
 
 header {
@@ -107,3 +108,4 @@ h2 {
 #map {
   height: 100%;
 }
+
