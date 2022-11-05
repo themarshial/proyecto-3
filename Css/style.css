@@ -88,7 +88,7 @@ body {
   height: 50%;
   align-items: center;
   justify-content: space-evenly;
-
+  background-color: white;
 }
 
 .chart {
@@ -230,13 +230,13 @@ body {
   .resultados {
     font-size: 1.2rem;
   }
-  .pregunta{
-    font-size: 1rem
+  .pregunta {
+    font-size: 1rem;
   }
-  .txtInput{
+  .txtInput {
     width: 80%;
   }
-  .row{
+  .row {
     flex-direction: column;
     height: auto;
   }
@@ -254,14 +254,12 @@ body {
   .btn {
     font-size: 1.3rem;
   }
-  .pregunta{
-    font-size: 1.3rem
+  .pregunta {
+    font-size: 1.3rem;
   }
-  .txtInput{
+  .txtInput {
     width: 80%;
   }
-  
-
 }
 
 @media (min-width: 1000px) {
@@ -276,10 +274,10 @@ body {
   .btn {
     font-size: 1.5rem;
   }
-  .pregunta{
-    font-size: 1.5rem
+  .pregunta {
+    font-size: 1.5rem;
   }
-  .txtInput{
+  .txtInput {
     width: 70%;
   }
 }
