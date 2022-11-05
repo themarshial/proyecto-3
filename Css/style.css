@@ -148,10 +148,6 @@ body {
   font-size: 1.7rem;
 }
 
-/* #graphs-container {
-  height: calc(100vh - 120px);
-} */
-
 .questions {
   width: 50%;
   height: 50%;
@@ -279,5 +275,92 @@ body {
   }
   .txtInput {
     width: 70%;
+  }
+}
+
+/* Mobile devices (Portrait) */
+@media (min-width: 320px) and (max-width: 480px) {
+  .logo {
+    width: 30%;
+    padding-left: 1rem;
+  }
+  .nav {
+    width: 70%;
+    padding-right: 1rem;
+  }
+  #top-dash {
+    font-size: 0.9rem;
+  }
+  .main {
+    padding-top: 1rem;
+  }
+  .resultados {
+    margin-top: 2rem;
+  }
+  .questions {
+    width: 100%;
+  }
+  .txtInput {
+    width: 90%;
+  }
+
+  #country {
+    overflow-y: hidden;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  h1.main,
+  #contenedor-sistema h1 {
+    font-size: 2rem;
+    padding: 1rem 0;
+  }
+  #main-container h2,
+  #contenedor-sistema h2 {
+    font-size: 1rem;
+  }
+  .bloque-btn {
+    padding: 0.8rem 0;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+  h3.resultados {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+  .contenedor {
+    align-items: flex-start;
+  }
+  .questions {
+    margin-top: 2rem;
+    width: 100%;
+  }
+  .txtInput {
+    width: 90%;
+  }
+  #country {
+    overflow-y: hidden;
+  }
+  .form_temas {
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .topics {
+    margin: auto 0.5rem;
+  }
+  .input input[type='checkbox']:first-of-type {
+    margin-top: auto;
+  }
+
+  #contenedor-sistema h2 {
+    margin-bottom: 2rem;
+  }
+  .row {
+    flex-direction: column;
+    height: auto;
   }
 }
