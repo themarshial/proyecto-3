@@ -34,6 +34,7 @@ export const makeAgeChart = (data) => {
         },
         */
         resposive: true,
+        maintainAspectRatio: false,
       },
     }
   );
@@ -59,6 +60,7 @@ export const makeOsChart = (data) => {
     },
     options: {
       resposive: true,
+      maintainAspectRatio: false,
     },
   });
   return osChart;

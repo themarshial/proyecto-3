@@ -92,16 +92,17 @@ export const manageQuestions = () => {
 
 export const showResults = () => {
   document.querySelectorAll(".contenedor").forEach((e) => {
+    
     e.classList.add("hidden");
   });
-  document.getElementById("idGraficas").classList.remove("hidden");
+  document.getElementById("graphs-container").classList.remove("hidden");
 };
 
 export const showSurvey = () => {
   document.querySelectorAll(".contenedor").forEach((e) => {
     e.classList.add("hidden");
   });
-  document.getElementById("contenedor-principal").classList.remove("hidden");
+  document.getElementById("main-container").classList.remove("hidden");
   clearData();
 };
 

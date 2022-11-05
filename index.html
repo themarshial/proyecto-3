@@ -4,10 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Css/header.css" />
-
-    <link rel="stylesheet" href="./Css/style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="Css/style.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
@@ -32,240 +29,255 @@
 
   <body>
     <header class="header">
-      <div id="top-dash">U-BOOTCAMP</div>
-      <div class="link" id="encuestaLink">Encuesta</div>
-      <div class="link" id="headerDashboardLink">Dasboard</div>
+      <div class="logo">
+        <div id="top-dash">U-BOOTCAMP</div>
+      </div>
+      <div class="nav">
+        <div class="link" id="encuestaLink">Encuesta</div>
+        <div class="link" id="headerDashboardLink">Dasboard</div>
+      </div>
     </header>
 
-    <div class="contenedor" id="contenedor-principal">
-      <div class="hero">
-        <h1 class="main">¡Queremos conocerte más!</h1>
-        <h2>
-          Te agradecemos que te tomes unos momomentos para responder esta
-          pequeña encuenta y conocerte mejor. Con esto podremos seguir
-          mejorando.
-        </h2>
-        <div class="validate-message"></div>
-        <div class="bloque-btn">
-          <button type="button" class="btn next">Empezar encuesta</button>
+    <main class="main-wrapper">
+      <div class="contenedor" id="main-container">
+        <div class="hero">
+          <h1 class="main">¡Queremos conocerte más!</h1>
+          <h2>
+            Te agradecemos que te tomes unos momentos para responder esta
+            pequeña encuesta y conocerte mejor. Con esto podremos seguir
+            mejorando.
+          </h2>
+          <div class="validate-message"></div>
+          <div class="bloque-btn">
+            <button type="button" class="btn next">Empezar encuesta</button>
+          </div>
+          <h3 class="resultados">
+            Si deseas consultar los resultados, puedes accesar
+            <span id="dasboardLink" class="link"> AQUÍ </span>.
+          </h3>
         </div>
-        <h3 class="resultados">
-          Si deseas consultar los resultados, puedes accesar
-          <span id="dasboardLink" class="link"> AQUÍ </span>.
-        </h3>
       </div>
-    </div>
 
-    <!--nombre-->
-    <div class="contenedor hidden questionContainer" id="contenedor-nombre">
-      <div class="questions">
-        <div class="input">
-          <div class="bloque-form">
+      <!--nombre-->
+      <div class="contenedor hidden questionContainer" id="contenedor-nombre">
+        <div class="questions">
+          <div class="input">
             <input type="text" id="name" class="txtInput" />
             <h2 class="pregunta">Por favor escribe tu nombre completo</h2>
-          </div>
-          <div class="validate-message"></div>
-          <div class="bloque-btn">
-            <button type="button" class="btn next">Siguiente Pregunta</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="contenedor hidden questionContainer" id="contenedor-edad">
-      <div class="questions">
-        <div class="input">
-          <input type="number" id="age" class="txtInput" />
-          <h2 class="pregunta">Por favor escribe tu edad</h2>
-          <div class="validate-message"></div>
-          <div class="bloque-btn">
-            <button type="button" class="btn next">Siguiente Pregunta</button>
+            <div class="validate-message"></div>
+            <div class="bloque-btn">
+              <button type="button" class="btn next">Siguiente Pregunta</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="contenedor hidden questionContainer" id="contenedor-pais">
-      <div class="questions">
-        <div class="input">
-          <h2 class="pregunta">¿De que pais estas tomando este Bootcamp?</h2>
-          <select name="country" id="country" class="txtInput">
-            <option disabled selected value="">Selecciona una opción</option>
-            <option value="Mexico">Mexico</option>
-            <option value="Bolivia">Bolivia</option>
-            <option value="Venezuela">Venezuela</option>
-            <option value="Argentina">Argentina</option>
-            <option value="Costa Rica">Costa Rica</option>
-          </select>
-          <div class="validate-message"></div>
-          <div class="bloque-btn">
-            <button type="button" class="btn next">Siguiente Pregunta</button>
+      <div class="contenedor hidden questionContainer" id="contenedor-edad">
+        <div class="questions">
+          <div class="input">
+            <input type="number" id="age" class="txtInput" />
+            <h2 class="pregunta">Por favor escribe tu edad</h2>
+            <div class="validate-message"></div>
+            <div class="bloque-btn">
+              <button type="button" class="btn next">Siguiente Pregunta</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="contenedor hidden questionContainer" id="contenedor-sistema">
-      <div class="questions">
-        <div class="input">
-          <h2 class="pregunta">¿Que sistema operativo utilizas?</h2>
-          <form class="form">
-            <input
-              type="radio"
-              value="Windows"
-              class="sist_op"
-              id="windows"
-              name="sist_op"
-            />
-            <label for="Windows">Windows</label><br />
-            <input
-              type="radio"
-              value="MacOS"
-              class="sist_op"
-              id="
-        MacOS"
-              name="sist_op"
-            />
-            <label for="mac">Mac</label><br />
-            <input
-              type="radio"
-              value="Linux"
-              class="sist_op"
-              id="linux"
-              name="sist_op"
-            />
-            <label for="linux">Linux</label>
+      <div class="contenedor hidden questionContainer" id="country-container">
+        <div class="questions">
+          <div class="input">
+            <h2 class="pregunta">¿De que pais estas tomando este Bootcamp?</h2>
+            <select name="country" id="country" class="txtInput">
+              <option disabled selected value="">Selecciona una opción</option>
+              <option value="Mexico">Mexico</option>
+              <option value="Bolivia">Bolivia</option>
+              <option value="Venezuela">Venezuela</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Costa Rica">Costa Rica</option>
+            </select>
+            <div class="validate-message"></div>
+            <div class="bloque-btn">
+              <button type="button" class="btn next">Siguiente Pregunta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor hidden questionContainer" id="os-container">
+        <div class="questions">
+          <div class="input">
+            <h2 class="pregunta">¿Que sistema operativo utilizas?</h2>
+            <form class="form">
+              <input
+                type="radio"
+                value="Windows"
+                class="sist_op"
+                id="windows"
+                name="sist_op"
+              />
+              <label for="Windows">Windows</label><br />
+              <input
+                type="radio"
+                value="MacOS"
+                class="sist_op"
+                id="MacOS"
+                name="sist_op"
+              />
+              <label for="mac">Mac</label><br />
+              <input
+                type="radio"
+                value="Linux"
+                class="sist_op"
+                id="linux"
+                name="sist_op"
+              />
+              <label for="linux">Linux</label>
+              <br />
+            </form>
+            <div class="validate-message"></div>
             <br />
-          </form>
-          <div class="validate-message"></div>
+            <div class="bloque-btn">
+              <button type="button" class="btn next">Siguiente Pregunta</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor hidden questionContainer" id="topic-container">
+        <div class="questions">
+          <div class="input">
+            <h2 class="pregunta">Selecciona una o mas opciones</h2>
+            <div class="form_temas">
+              <input
+                type="checkbox"
+                class="topics"
+                name="html"
+                id="respuesta1"
+                value="HTML"
+              />
+              <label for="tema_1"></label>HTML<br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="css"
+                id="respuesta2"
+                value="css"
+              />
+              <label for="tema_2">CSS</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="Javascript"
+                id="respuesta3"
+                value="Javascript"
+              />
+              <label for="tema_3">Javascript</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="Arrays"
+                id="respuesta4"
+                value="Arrays"
+              />
+              <label for="tema_4">Arrays</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="DOM"
+                id="respuesta5"
+                value="DOM"
+              />
+              <label for="tema_5">DOM</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="Funciones"
+                id="respuesta6"
+                value="DOM"
+              />
+              <label for="tema_6">Funciones</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="Objectos"
+                id="respuesta7"
+                value="Objectos"
+              />
+              <label for="tema_7">Objetos</label><br />
+              <input
+                type="checkbox"
+                class="topics"
+                name="Promesas"
+                id="respuesta8"
+                value="Promesas"
+              />
+              <label for="tema_8">Promesas</label><br />
+            </div>
+            <br />
+            <div class="validate-message"></div>
+            <div class="bloque-btn">
+              <button type="button" class="btn next">Finalizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contenedor hidden questionContainer" id="contenedor-sistema">
+        <div class="questions">
+          <div class="input">
+            <div>
+              <h1>¡Gracias!</h1>
+            </div>
+            <h2 class="pregunta">
+              El paso final es darle al botón para guardar las respuestas.
+              Estaremos muy agradecidos por tu pariticpación.
+            </h2>
+            <div class="bloque-btn">
+              <button type="button" class="btn save">Guardar</button>
+            </div>
+          </div>
           <br />
-          <div class="bloque-btn">
-            <button type="button" class="btn next">Siguiente Pregunta</button>
-          </div>
         </div>
       </div>
-    </div>
 
-    <div class="contenedor hidden questionContainer" id="contenedor-sistema">
-      <div class="questions">
-        <div class="input">
-          <h2 class="pregunta">Selecciona una o mas opciones</h2>
-          <div class="form_temas">
-            <input
-              type="checkbox"
-              class="topics"
-              name="html"
-              id="respuesta1"
-              value="HTML"
-            />
-            <label for="tema_1"></label>HTML<br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="css"
-              id="respuesta2"
-              value="css"
-            />
-            <label for="tema_2">CSS</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="Javascript"
-              id="respuesta3"
-              value="Javascript"
-            />
-            <label for="tema_3">Javascript</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="Arrays"
-              id="respuesta4"
-              value="Arrays"
-            />
-            <label for="tema_4">Arrays</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="DOM"
-              id="respuesta5"
-              value="DOM"
-            />
-            <label for="tema_5">DOM</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="Funciones"
-              id="respuesta6"
-              value="DOM"
-            />
-            <label for="tema_6">Funciones</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="Objectos"
-              id="respuesta7"
-              value="Objectos"
-            />
-            <label for="tema_7">Objetos</label><br />
-            <input
-              type="checkbox"
-              class="topics"
-              name="Promesas"
-              id="respuesta8"
-              value="Promesas"
-            />
-            <label for="tema_8">Promesas</label><br />
+      <div class="contenedor hidden" id="graphs-container">
+        <div class="charts-wrapper">
+          <div class="row">
+            <div class="graphs-wrapper">
+              <h3 class="chart-title">Edades</h3>
+              <div class="chart">
+                <canvas id="chart-1"></canvas>
+              </div>
+            </div>
+            <div class="graphs-wrapper">
+              <h3 class="chart-title">Sistema Operativo</h3>
+              <div class="chart">
+                <canvas id="chart-2"></canvas>
+              </div>
+            </div>
           </div>
-          <br />
-          <div class="validate-message"></div>
-          <div class="bloque-btn">
-            <button type="button" class="btn next">Finalizar</button>
-          </div>
-        </div>
-      </div>
-    </div>
+          <div class="row">
+            <div class="graphs-wrapper">
+              <h3 class="chart-title">Países</h3>
+              <div class="chart" id="map"></div>
+            </div>
 
-    <div class="contenedor hidden questionContainer" id="contenedor-sistema">
-      <div class="questions">
-        <div class="input">
-          <div>
-            <h1>¡Gracias!</h1>
-          </div>
-          <h2 class="pregunta">
-            El paso final es darle al botòn para guardar las respuestas.
-            Estaremos muy agradecidos por tu pariticpaciòn.
-          </h2>
-          <div class="bloque-btn">
-            <button type="button" class="btn save">Guardar</button>
+            <div class="graphs-wrapper">
+              <h3 class="chart-title">Temas que se dificultan</h3>
+              <div class="chart">
+                <canvas id="chart-4"></canvas>
+              </div>
+            </div>
           </div>
         </div>
-        <br />
       </div>
-    </div>
+    </main>
 
-    <div class="contenedor hidden" id="idGraficas">
-      <div class="chart-container">
-        <div class="row">
-          <div class="chart-1">
-            <canvas id="chart-1" height="200px" width="200px"></canvas>
-          </div>
-          <div class="chart-2">
-            <canvas id="chart-2" height="200px" width="200px"></canvas>
-          </div>
-        </div>
-        <div class="row">
-          <div class="chart-3">
-            <div id="map"></div>
-            <!--<canvas id="chart-3"></canvas>-->
-          </div>
-          <div class="chart-4">
-            <canvas id="chart-4"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- <button onclick="location.href.">Este boton no me sirvio como link.</button> -->
 
     <script src="./index.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </body>
 </html>
