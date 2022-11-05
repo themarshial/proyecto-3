@@ -74,6 +74,19 @@ export const buildSurveyObject = () => {
   });
   return survey;
 };
+export function fillCountrySelectBox() {
+  let select = document.querySelector('#country');
+  DB.getCountriesData()
+    .then((res) => {
+      res.features.map((country) => {
+        let option = document.createElement('option');
+        option.innerHTML = country.properties.COUNTRY;
+        option.value = country.properties.COUNTRY;
+        select.appendChild(option);
+      });
+    })
+    .catch((err) => console.log(err));
+}
 
 export const manageQuestions = () => {
   document.querySelectorAll('.next').forEach((boton, index) => {
@@ -99,9 +112,9 @@ export const showResults = () => {
 
 export const showSurvey = () => {
   document.querySelectorAll('.contenedor').forEach((e) => {
-    e.classList.toggle('hidden');
+    e.classList.add('hidden');
   });
-  /* document.getElementById("main-container").classList.remove("hidden"); */
+  document.getElementById('main-container').classList.remove('hidden');
   clearData();
 };
 

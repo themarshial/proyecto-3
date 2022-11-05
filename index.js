@@ -1,7 +1,7 @@
 import * as UI from './js/ui.js';
 import * as DB from './js/db.js';
 import * as CH from './js/graph.js';
-
+UI.fillCountrySelectBox();
 UI.manageQuestions();
 
 document.querySelector('.save').addEventListener('click', () => {

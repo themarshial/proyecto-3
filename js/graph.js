@@ -144,7 +144,7 @@ export const buildDashBoard = () => {
               singleCountries,
               countryFrecuencies
             );
-
+            console.log(res);
             map = L.map('map').setView([23.634501, -82.552784], 3);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 6,
