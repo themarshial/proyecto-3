@@ -9,6 +9,8 @@ Para el proyecto 3 decidimos hacer una aplicación en la cual se realiza una peq
 
 El objetivo de este proyecto es recolectar información de los estudiantes del bootcamp para mostrar la comunicación y diversidad de nuestros compañeros.
 
+![App Screenshot](https://i.ibb.co/ZByhq2M/Intro.png)
+
 ## Link del proyecto
 
 Para acceder a la encuesta y ver los resultados ir al siguiente enlace:
@@ -91,5 +93,6 @@ En el archivo /js/db.js cambia el valor de la constante **ApiURL** a lo siguient
 ## Screenshots
 
 ![App Screenshot](https://i.ibb.co/GCw8Lxd/scsh-1.jpg)
+
 
 
